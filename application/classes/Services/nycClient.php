@@ -17,8 +17,12 @@ class nycClient {
             CURLOPT_URL => $this->apiUrl . '?$q=' . $q .'&$limit=10',
         ));
 
-        $resp = curl_exec($curl);
+        $resp = json_decode(curl_exec($curl),true);
+        foreach ($resp as $place) {
 
+            print_r($place,true);
+
+        }
         curl_close($curl);
 
         return $resp;

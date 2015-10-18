@@ -15,7 +15,7 @@ use Services\nycClient;
 class ApiController extends Controller
 {
     /**
-     * Method available by /home/index or /home or /
+     * Method available by /api
      *
      * @return mixed
      */
